@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "f5mkuPy"
+version = "1.0.0"
+description = "f5mkupy allows to encrypt and decrypt data using the format found in F5 BIG-IP bigip*.conf files with the key retrieved by f5mku -K."
+authors = ["Simon Kowallik <sk-github@simonkowallik.com>"]
+license = "ISC"
+
+readme = "README.md"
+
+homepage = "https://github.com/simonkowallik/f5mkupy"
+repository = "https://github.com/simonkowallik/f5mkupy"
+documentation = "https://github.com/simonkowallik/f5mkupy"
+
+keywords = [
+    "F5",
+    "DevOps",
+    "Security",
+]
+
+classifiers = [
+    "License :: OSI Approved :: ISC License (ISCL)",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python",
+    "Operating System :: OS Independent",
+    "Natural Language :: English",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Topic :: Internet",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development",
+    "Topic :: System :: Installation/Setup",
+    "Topic :: System :: Networking",
+    "Topic :: System :: Systems Administration",
+    "Topic :: System",
+    "Topic :: Security",
+]
+
+[tool.poetry.scripts]
+f5mkupy = "f5mkupy.cli:cli"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+cryptography = "*"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
+isort = "^5.10.1"
+pylint = "^2.15.5"
+pytest = "^7.2.0"
+pytest-cov = "^4.0.0"
+pytest-mock = "^3.10.0"
+coverage = "^6.5.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
