@@ -1,5 +1,8 @@
 # f5mkuPy
+
 [![CI Pipeline](https://github.com/simonkowallik/f5mkupy/actions/workflows/ci-pipeline.yaml/badge.svg)](https://github.com/simonkowallik/f5mkupy/actions/workflows/ci-pipeline.yaml)
+[![Maintainability](https://api.codeclimate.com/v1/badges/aed3f2ca1e1bb196e692/maintainability)](https://codeclimate.com/github/simonkowallik/f5mkupy/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/aed3f2ca1e1bb196e692/test_coverage)](https://codeclimate.com/github/simonkowallik/f5mkupy/test_coverage)
 
 _f5mkupy allows to `encrypt` and `decrypt` data using the format found in F5 BIG-IP `bigip*.conf` files with the key retrieved by `f5mku -K`._
 
@@ -10,9 +13,9 @@ _f5mkupy allows to `encrypt` and `decrypt` data using the format found in F5 BIG
 
 `f5mkuPy` helps you to:
 
-  - decrypt
-  - encrypt
-  - and compare
+- decrypt
+- encrypt
+- and compare
 
 secrets stored inline within `bigip*.conf` files.
 
@@ -22,9 +25,9 @@ This can be helpful in various scenarios, for example during migrations or idemp
 
 Have a look in the [examples/](examples/) folder for details.
 
-## Usage: command line quick walk-through
+## Usage
 
-A quick command line walk-through.
+### A quick command line walk-through.
 
 ```bash
 # f5mku -K
@@ -61,10 +64,7 @@ ciphertext=$(
 
 ```
 
-
-## Usage: python module quick walk-through
-
-A quick python module walk-through.
+### A quick python module walk-through.
 
 ```python
 from f5mkupy import decrypt, encrypt, extract_salt
@@ -100,8 +100,6 @@ ciphertext = encrypt(
     )
 assert ciphertext == BIGIP_CONF_CIPHERTEXT
 ```
-
-
 
 ## Disclaimer
 
