@@ -115,7 +115,7 @@ def _f5mku_decode(f5mku: str) -> bytes:
 
 def _generate_salt(length: Optional[int] = 2) -> bytes:
     """Generates a salt (alpha characters)."""
-    _salt = "".join(secrets.choice(string.ascii_letters) for i in range(length))
+    _salt = "".join(secrets.choice(string.ascii_letters + string.digits) for i in range(length))
     return _force_bytes(_salt)
 
 
