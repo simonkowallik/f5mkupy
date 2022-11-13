@@ -149,10 +149,10 @@ class Test_generate_salt:
     def test_len_custom(self):
         assert len(_generate_salt(4)) == 4
 
-    def test_salt_isalpha(self):
+    def test_salt_isalnum(self):
         _salt = _generate_salt(100)
         _salt = _salt.decode()
-        assert _salt.str.isalnum()
+        assert _salt.isalnum()
 
 
 class Test__format_ciphertext:
