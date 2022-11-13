@@ -122,7 +122,7 @@ def _generate_salt(length: Optional[int] = 2) -> bytes:
 def _remove_salt(plaintext: bytes, salt: bytes) -> bytes:
     """Removes given salt from plaintext."""
     if plaintext.startswith(salt):
-        return plaintext[len(salt) :]
+        return plaintext[len(salt):]
 
     raise ValueError(f"Plaintext ({plaintext}) does not start with salt {salt}")
 
