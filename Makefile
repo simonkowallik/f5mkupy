@@ -39,10 +39,10 @@ code-format: isort black # black has the last word
 
 test:
 	pytest --cov=f5mkupy tests/
-	coverage report -m
 	coverage html
 	coverage lcov
 	coverage xml
+	coverage report -m
 
 tests: test
 
