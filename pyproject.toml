@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "f5mkuPy"
-version = "1.0.0"
+version = "1.0.1"
 description = "f5mkupy allows to encrypt and decrypt data using the format found in F5 BIG-IP bigip*.conf files with the key retrieved by f5mku -K."
 authors = ["Simon Kowallik <sk-github@simonkowallik.com>"]
 license = "ISC"
