@@ -1,5 +1,5 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 import argparse
 import re
 from f5mkupy import decrypt, encrypt, extract_salt
@@ -35,7 +35,7 @@ def _cli_arg_parser():
 def search_ciphertext(string: str):
     """search for a secret within `string` and return it, otherwise return `None`."""
     # pattern to match secret format
-    pattern = re.compile(r"\$M\$[a-zA-Z]+\$[a-zA-Z0-9+/]+={0,2}$")
+    pattern = re.compile(r"\$M\$[a-zA-Z0-9]+\$[a-zA-Z0-9+/]+={0,2}$")
     re_match = re.search(pattern, string)
     if re_match:
         # return secret if found
