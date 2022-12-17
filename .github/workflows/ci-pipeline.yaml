@@ -16,7 +16,7 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         python-version:
-          - '3.7.5' # legacy
+          - '3.7' # legacy
           - '3.x' # latest
         python-package-version:
           - 'skip'  # use poetry selected version
